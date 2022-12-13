@@ -1,6 +1,7 @@
 import React from "react";
 import ImageGallery from 'react-image-gallery';
 
+
 const images = [
     {
         original: 'https://media.gettyimages.com/id/1357705422/photo/luxury-spa-massage-room-interior-with-massage-tables-hot-tub-and-marble-floor.jpg?s=612x612&w=0&k=20&c=spSLgcy-iTCM5yDvI-3pxMnXyL91wjCm-7oBcGwZO6Q=',

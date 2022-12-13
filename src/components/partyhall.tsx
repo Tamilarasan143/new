@@ -2,6 +2,7 @@ import React from "react";
 import ImageGallery from 'react-image-gallery';
 
 
+
 const images = [
     {
         original: 'https://media.istockphoto.com/id/1164324498/photo/florist-finishing-their-part-of-job-for-wedding-in-banquet-hall.webp?s=612x612&w=0&k=20&c=LNYZjVEZe9GFsYaWFKB8y5_lGr085c2UXOUOutcu7aE=',
