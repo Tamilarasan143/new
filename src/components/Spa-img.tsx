@@ -56,7 +56,8 @@ const images = [
 
     export default function Spa(){
         return (
-             
+             <div><h3>Our Beautiful Spa view images</h3>
              <div><ImageGallery items={images} /> </div>
+             </div>
         )
 }

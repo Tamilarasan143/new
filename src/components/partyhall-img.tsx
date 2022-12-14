@@ -58,6 +58,8 @@ const images = [
 
 export default function Partyhall(){
     return (
+        <div><h3>Our Beautiful Partyhall view images</h3>
          <div><ImageGallery items={images} /> </div>
+         </div>
     )
 }

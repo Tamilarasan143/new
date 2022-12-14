@@ -57,7 +57,8 @@ const images = [
 
 export default function Bar(){
     return (
-
-         <div><ImageGallery items={images} /> </div>
+             <div><h3>Our Beautiful Bar and Restaurant view images</h3>
+             <div><ImageGallery items={images} /> </div>
+             </div>
     )
 }
