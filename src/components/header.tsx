@@ -22,8 +22,11 @@ export default function Header() {
             <div >
               <Nav >
                 <Nav.Link href="#deets">Home</Nav.Link>
+                <Nav.Link href="#deets">Eniqury</Nav.Link>
+                <Nav.Link href="#deets">Contact Us</Nav.Link>
+                <Nav.Link href="#memes">About us</Nav.Link>
                 <Nav.Link eventKey={2} href="#memes">
-                  About us
+                  My Account
                 </Nav.Link>
               </Nav>
             </div>

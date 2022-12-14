@@ -8,7 +8,7 @@ import img4 from './OIP2.jpg'
 import img5 from "./bar&rest2.jpg"
 import img6 from "./partyhall2.jpg"
 import { Link } from "react-router-dom";
-import Spa from './Spaimg'
+
 
 
 export default function Main() {
@@ -23,7 +23,7 @@ export default function Main() {
             <Image className='rounded-circle' width="140" height="140" src={img1}></Image>
             <h2>Spa</h2>
             <p>Our first group revolves around the idea of relaxation, with “It"s time to relax!”.</p>
-            <p><Link className="btn btn-secondary" to={"Spa.tsx"} >View details &raquo;</Link></p>
+            <p><Link className="btn btn-secondary" to={'spa'} >View details &raquo;</Link></p>
           </div>
           <div className="col-lg-4">
           <Image className='rounded-circle' width="140" height="140" src={img2}></Image>
