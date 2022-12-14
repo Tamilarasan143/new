@@ -1,12 +1,8 @@
 import React from 'react';
-
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from './components/header';
-import Main from './components/main';
-import NoTransitionExample from './components/carcoual';
-import Footer from './components/footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Routerfile from './components/routerfile';
+
 
 // import Spa from './components/Spa';
 // import Bar from './components/Bar';
@@ -15,11 +11,7 @@ import Routerfile from './components/routerfile';
 function App() {
   return (
     <div className="App">
-    
-    <Routerfile />
-     
-     
-    
+      <Routerfile/>
     </div>
   );
 }

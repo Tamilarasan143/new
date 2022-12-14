@@ -4,6 +4,8 @@ import img0 from "../assets/images/logo.gif"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
+
 
 export default function Header() {
   return (
@@ -21,13 +23,11 @@ export default function Header() {
           <Navbar.Collapse id="responsive-navbar-nav " className='Nvc' >
             <div >
               <Nav >
-                <Nav.Link href="#deets">Home</Nav.Link>
-                <Nav.Link href="#deets">Eniqury</Nav.Link>
-                <Nav.Link href="#deets">Contact Us</Nav.Link>
-                <Nav.Link href="#memes">About us</Nav.Link>
-                <Nav.Link eventKey={2} href="#memes">
-                  My Account
-                </Nav.Link>
+                <Nav.Link ><Link to={'home'}>Home</Link></Nav.Link>
+                <Nav.Link ><Link to={'enquriy'}>Enquriy</Link></Nav.Link>
+                <Nav.Link ><Link to={'contactus'}>Contact</Link></Nav.Link>
+                <Nav.Link ><Link to={'aboutus'}>Aboutus</Link></Nav.Link>
+                <Nav.Link eventKey={2}><Link to={'myaccount'}>Myaccount</Link></Nav.Link>                
               </Nav>
             </div>
             {/* </div> */}
