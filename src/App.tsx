@@ -6,10 +6,10 @@ import Header from './components/header';
 import Main from './components/main';
 import NoTransitionExample from './components/carcoual';
 import Footer from './components/footer';
-import Imggallery from './components/imggallery';
-import Spa from './components/Spa';
-import Bar from './components/Bar';
-import Partyhall from './components/partyhall';
+
+// import Spa from './components/Spa';
+// import Bar from './components/Bar';
+// import Partyhall from './components/partyhall';
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
       <Header />
       <NoTransitionExample />
       <Main />
-      {/* <Imggallery/> */}
-      <Spa/>
-      {/* <Partyhall/> */}
-      {/* <Bar/> */}
+     
+      {/* <Spa/>
+      <Partyhall/> 
+       <Bar/>  */}
       <Footer />
     </div>
   );
