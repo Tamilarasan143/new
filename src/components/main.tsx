@@ -20,21 +20,21 @@ export default function Main() {
             <Image className='rounded-circle' width="140" height="140" src={img1}></Image>
             <h2>Spa</h2>
             <p>Our first group revolves around the idea of relaxation, with “It"s time to relax!”.</p>
-            <p><a className="btn btn-secondary" href="https://stylesatlife.com/articles/best-spas-in-chennai/">View details &raquo;</a></p>
+            <p><a className="btn btn-secondary" href=" ">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
           <Image className='rounded-circle' width="140" height="140" src={img2}></Image>
 
             <h2>Party Hall</h2>
             <p>A Party hall, function hall, or reception hall, is a special purpose room, or a building, used for hosting large social and business events.</p>
-            <p><a className="btn btn-secondary" href="https://www.venuelook.com/chennai/party-halls">View details &raquo;</a></p>
+            <p><a className="btn btn-secondary" href=" ">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
           <Image className='rounded-circle' width="140" height="140" src={img3}></Image>
 
             <h2>Bar and Restaurant</h2>
             <p>The emotions you want to inspire in your customers. “Happy” is not enough. Think about the most popular restaurants.</p>
-            <p><a className="btn btn-secondary" href="https://www.justdial.com/Chennai/Restaurants-Bars/nct-10408938">View details &raquo;</a></p>
+            <p><a className="btn btn-secondary" href=" ">View details &raquo;</a></p>
           </div>
         </div>
 

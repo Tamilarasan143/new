@@ -7,6 +7,9 @@ import Main from './components/main';
 import NoTransitionExample from './components/carcoual';
 import Footer from './components/footer';
 import Imggallery from './components/imggallery';
+import Spa from './components/Spa';
+import Bar from './components/Bar';
+import Partyhall from './components/partyhall';
 
 function App() {
   return (
@@ -14,7 +17,10 @@ function App() {
       <Header />
       <NoTransitionExample />
       <Main />
-      <Imggallery/>
+      {/* <Imggallery/> */}
+      <Spa/>
+      {/* <Partyhall/> */}
+      {/* <Bar/> */}
       <Footer />
     </div>
   );
