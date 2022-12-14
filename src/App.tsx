@@ -15,7 +15,7 @@ function App() {
       <Header />
       <NoTransitionExample />
       <Main />
-      <Spa/>
+      {/* <Spa/> */}
       {/* <Partyhall/> */}
       {/* <Bar/> */}
       <Footer />
