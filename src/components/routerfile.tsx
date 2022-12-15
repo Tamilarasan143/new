@@ -18,7 +18,7 @@ export default function Routerfile() {
         <Route path="homepage" element={<HomePage />} />
         <Route path="details/spa" element={<SpaDetails />} />
         <Route path="details/bar" element={<BarDetails />} />
-        <Route path="/details/party" element={<PartyDetails />} />
+        <Route path="details/party" element={<PartyDetails />} />
         <Route path="enquriypage" element={<EnquriyPage />} />
         <Route path="contactuspage" element={<ContactPage />} />
         <Route path="aboutuspage" element={<AboutusPage />} />

@@ -2,12 +2,14 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Routerfile from './components/routerfile';
-//naren
-//tamil
+import Imgdata from './components/img-data';
+
+
 function App() {
+  
   return (
     <div className="App">
-      <Routerfile/>
+     <Imgdata/>
 
     </div>
   );
