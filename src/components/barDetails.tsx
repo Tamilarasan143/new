@@ -55,7 +55,7 @@ const images = [
     },
 ]
 
-export default function Bar(){
+export default function BarDetails(){
     return (
              <div><h3>Our Beautiful Bar and Restaurant view images</h3>
              <div><ImageGallery items={images} /> </div>

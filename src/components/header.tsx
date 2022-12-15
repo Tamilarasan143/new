@@ -23,11 +23,11 @@ export default function Header() {
           <Navbar.Collapse id="responsive-navbar-nav " className='Nvc' >
             <div >
               <Nav >
-                <Nav.Link ><Link to={'home'}>Home</Link></Nav.Link>
-                <Nav.Link ><Link to={'enquriy'}>Enquriy</Link></Nav.Link>
-                <Nav.Link ><Link to={'contactus'}>Contact</Link></Nav.Link>
-                <Nav.Link ><Link to={'aboutus'}>Aboutus</Link></Nav.Link>
-                <Nav.Link eventKey={2}><Link to={'myaccount'}>Myaccount</Link></Nav.Link>                
+                <Nav.Link ><Link to={'homepage'}>Home</Link></Nav.Link>
+                <Nav.Link ><Link to={'enquriypage'}>Enquriy</Link></Nav.Link>
+                <Nav.Link ><Link to={'contactuspage'}>Contact</Link></Nav.Link>
+                <Nav.Link ><Link to={'aboutuspage'}>Aboutus</Link></Nav.Link>
+                <Nav.Link eventKey={2}><Link to={'myaccountpage'}>Myaccount</Link></Nav.Link>                
               </Nav>
             </div>
             {/* </div> */}

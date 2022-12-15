@@ -56,7 +56,7 @@ const images = [
     },
 ]
 
-export default function Partyhall(){
+export default function PartyDetails(){
     return (
         <div><h3>Our Beautiful Partyhall view images</h3>
          <div><ImageGallery items={images} /> </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Enquriy() {
+export default function EnquriyPage() {
   return (
     <div>enquriy</div>
   )

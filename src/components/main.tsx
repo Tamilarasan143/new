@@ -23,21 +23,21 @@ export default function Main() {
             <Image className='rounded-circle' width="140" height="140" src={img1}></Image>
             <h2>Spa</h2>
             <p>Our first group revolves around the idea of relaxation, with “It"s time to relax!”.</p>
-            <p><Link className="btn btn-secondary" to={"Spa.tsx"} >View details &raquo;</Link></p>
+            <p><Link className="btn btn-secondary" to={'spa/details'} >View details &raquo;</Link></p>
           </div>
           <div className="col-lg-4">
             <Image className='rounded-circle' width="140" height="140" src={img2}></Image>
 
             <h2>Party Hall</h2>
             <p>A Party hall, function hall, or reception hall, is a special purpose room, or a building, used for hosting large social and business events.</p>
-            <p><Link className="btn btn-secondary" to={'party'}>View details &raquo;</Link></p>
+            <p><Link className="btn btn-secondary" to={'party/details'}>View details &raquo;</Link></p>
           </div>
           <div className="col-lg-4">
             <Image className='rounded-circle' width="140" height="140" src={img3}></Image>
 
             <h2>Bar and Restaurant</h2>
             <p>The emotions you want to inspire in your customers. “Happy” is not enough. Think about the most popular restaurants.</p>
-            <p><Link className="btn btn-secondary"  to={'bar'}>View details &raquo;</Link></p>
+            <p><Link className="btn btn-secondary"  to={'bar/details'}>View details &raquo;</Link></p>
           </div>
         </div>
 

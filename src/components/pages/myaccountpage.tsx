@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-export default function Myaccount() {
+export default function MyaccountPage() {
   return (
     <div style={{
       display: "flex",
