@@ -2,10 +2,8 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Routerfile from './components/routerfile';
+//naren
 //tamil
-
-
-
 function App() {
   return (
     <div className="App">
