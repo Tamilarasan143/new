@@ -13,19 +13,19 @@ export default function Footer() {
                         </tr>
                         <tr>
                             <td colSpan={2}>
-                                <div style={{textAlign:"center"}}><a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="aboutus.html">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Promoters</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="facilities">Facilities</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Location</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Clubmail</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Facilities Tariff&nbsp;</a>&nbsp;|&nbsp;&nbsp;<a href="#">Affiliation</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Membership Tariff</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Membership Form</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Events</a>
+                                <div style={{textAlign:"center"}}><a href="index.html">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="aboutus.html">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="facilities">Facilities</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Location</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Membership Tariff</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Membership Form</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Events</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Swimming Pool</a>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td colSpan={2}>
-                                <div style={{textAlign:"center"}}><a href="#">Swimming Pool</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Gym</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Yoga &amp; Meditation Center</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Naturopathic Massage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Indoor Games</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Outdoor Games</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Children's Tot lot</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Open Air Theater</a>
+                                <div style={{textAlign:"center"}}>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <td colSpan={2}>
-                                <div style={{textAlign:"center"}}><a href="#">Conference Hall</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Multi cuisine Restaurant</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Bar</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Guest Rooms</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Special Coaching Camps</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="enquiry">Enquiry</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="contactus">Contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Sitemap</a>
+                                <div style={{textAlign:"center"}}><a href="#">Conference Hall</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Gym</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Bar</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Guest Rooms</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Special Coaching Camps</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="enquiry">Enquiry</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="contactus">Contact us</a>
                                 </div>
                             </td>
                         </tr>

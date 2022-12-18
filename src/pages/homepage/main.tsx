@@ -1,5 +1,4 @@
 import React from 'react'
-import './home.css'
 import Image from 'react-bootstrap/Image'
 import img1 from '../components/Pic/Spa.jpeg'
 import img2 from '../components/Pic/Party.jpeg'

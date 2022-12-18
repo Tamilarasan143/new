@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel';
-import img1 from "../assets/images/banner01.jpg"
-import img2 from "../assets/images/banner02.jpg"
-import img3 from "../assets/images/banner03.jpg"
-import img4 from "../assets/images/banner04.jpg"
-import img5 from "../assets/images/banner05.jpg"
+import img1 from "../../assets/images/banner01.jpg"
+import img2 from "../../assets/images/banner02.jpg"
+import img3 from "../../assets/images/banner03.jpg"
+import img4 from "../../assets/images/banner04.jpg"
+import img5 from "../../assets/images/banner05.jpg"
 
 
 function NoTransitionExample() {

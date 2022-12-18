@@ -1,15 +1,15 @@
 import React from "react";
 import ImageGallery from 'react-image-gallery';
-import bar1 from '../assets/images/bar/bar1.jpeg'
-import bar2 from '../assets/images/bar/bar2.jpeg'
-import bar3 from '../assets/images/bar/bar3.jpeg'
-import bar4 from '../assets/images/bar/bar4.jpeg'
-import bar5 from '../assets/images/bar/bar5.jpeg'
-import bar6 from '../assets/images/bar/bar6.jpeg'
-import bar7 from '../assets/images/bar/bar1.jpeg'
-import bar8 from '../assets/images/bar/bar2.jpeg'
-import bar9 from '../assets/images/bar/bar3.jpeg'
-import bar10 from '../assets/images/bar/bar4.jpeg'
+import bar1 from '../../assets/images/bar/bar1.jpeg'
+import bar2 from '../../assets/images/bar/bar2.jpeg'
+import bar3 from '../../assets/images/bar/bar3.jpeg'
+import bar4 from '../../assets/images/bar/bar4.jpeg'
+import bar5 from '../../assets/images/bar/bar5.jpeg'
+import bar6 from '../../assets/images/bar/bar6.jpeg'
+import bar7 from '../../assets/images/bar/bar1.jpeg'
+import bar8 from '../../assets/images/bar/bar2.jpeg'
+import bar9 from '../../assets/images/bar/bar3.jpeg'
+import bar10 from '../../assets/images/bar/bar4.jpeg'
 
 
 const images = [

@@ -1,6 +1,6 @@
 import React from 'react'
 import './home.css'
-import img0 from "../assets/images/logo.gif"
+import img0 from '../../assets/images/logo.gif'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -23,7 +23,7 @@ export default function Header() {
           <Navbar.Collapse id="responsive-navbar-nav " className='Nvc' >
             <div >
               <Nav >
-                <Nav.Link ><Link to={'homepage'}>Home</Link></Nav.Link>
+                <Nav.Link ><Link to={'/'}>Home</Link></Nav.Link>
                 <Nav.Link ><Link to={'enquriypage'}>Enquriy</Link></Nav.Link>
                 <Nav.Link ><Link to={'contactuspage'}>Contact</Link></Nav.Link>
                 <Nav.Link ><Link to={'aboutuspage'}>Aboutus</Link></Nav.Link>

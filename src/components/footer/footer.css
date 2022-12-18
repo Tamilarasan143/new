@@ -22,7 +22,7 @@ body {
     margin-right:70px;
     margin-bottom: 0px;
     /* width: 100vw; */
-     background-image: url(./mithrabg.gif) ; 
+     background-image: url("../../assets/images/mithrabg.gif") ; 
     background-repeat: no-repeat;
     background-color: #FFF154;
 
