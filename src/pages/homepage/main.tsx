@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image'
-import img1 from '../components/Pic/Spa.jpeg'
-import img2 from '../components/Pic/Party.jpeg'
-import img3 from '../components/Pic/Bar.jpeg'
-import img4 from '../components/Pic/Spa.jpeg'
-import img5 from '../components/Pic/Party.jpeg'
-import img6 from '../components/Pic/Bar.jpeg'
+import img1 from '../../assets/images/homepage/Spa.jpeg'
+import img2 from '../../assets/images/homepage/Party.jpeg'
+import img3 from '../../assets/images/homepage/Bar.jpeg'
+import img4 from '../../assets/images/homepage/Spa.jpeg'
+import img5 from '../../assets/images/homepage/Party.jpeg'
+import img6 from '../../assets/images/homepage/Bar.jpeg'
 import { Link } from "react-router-dom";
 
 

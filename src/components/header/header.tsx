@@ -26,7 +26,7 @@ export default function Header() {
                 <Nav.Link ><Link to={'/'}>Home</Link></Nav.Link>
                 <Nav.Link ><Link to={'enquriypage'}>Enquriy</Link></Nav.Link>
                 <Nav.Link ><Link to={'contactuspage'}>Contact</Link></Nav.Link>
-                <Nav.Link ><Link to={'aboutuspage'}>Aboutus</Link></Nav.Link>
+                <Nav.Link ><Link to={'aboutusp'}>Aboutus</Link></Nav.Link>
                 <Nav.Link eventKey={2}><Link to={'myaccountpage'}>Myaccount</Link></Nav.Link>                
               </Nav>
             </div>
