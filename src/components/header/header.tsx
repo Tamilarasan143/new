@@ -24,10 +24,10 @@ export default function Header() {
             <div >
               <Nav >
                 <Nav.Link ><Link to={'/'}>Home</Link></Nav.Link>
-                <Nav.Link ><Link to={'enquriypage'}>Enquriy</Link></Nav.Link>
-                <Nav.Link ><Link to={'contactuspage'}>Contact</Link></Nav.Link>
-                <Nav.Link ><Link to={'aboutusp'}>Aboutus</Link></Nav.Link>
-                <Nav.Link eventKey={2}><Link to={'myaccountpage'}>Myaccount</Link></Nav.Link>                
+                <Nav.Link ><Link to={'enquiry'}>Enquriy</Link></Nav.Link>
+                <Nav.Link ><Link to={'contact-us'}>Contact</Link></Nav.Link>
+                <Nav.Link ><Link to={'aboutus'}>Aboutus</Link></Nav.Link>
+                <Nav.Link eventKey={2}><Link to={'myacc'}>Myaccount</Link></Nav.Link>                
               </Nav>
             </div>
             {/* </div> */}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageGallery from 'react-image-gallery';
 import bar1 from '../../assets/images/bar/bar1.jpeg'
 import bar2 from '../../assets/images/bar/bar2.jpeg'
@@ -10,55 +10,74 @@ import bar7 from '../../assets/images/bar/bar1.jpeg'
 import bar8 from '../../assets/images/bar/bar2.jpeg'
 import bar9 from '../../assets/images/bar/bar3.jpeg'
 import bar10 from '../../assets/images/bar/bar4.jpeg'
+import { Container, Modal, Row } from "react-bootstrap";
+import Header from "../../components/header/header";
+import Footer from "../../components/footer/footer";
+import Image from "react-bootstrap/Image";
+import Col from "react-bootstrap/esm/Col";
+import ImgGallery from "../../components/imgGallery/imgGallery";
+import ImagePreview from "../../components/imgPreview/imagePreview";
 
 
 const images = [
-    {
-        original: bar1,
-        thumbnail: bar1,
-    },
-    {
-        original: bar2,
-        thumbnail: bar2,
-    },
-    {
-        original: bar3,
-        thumbnail: bar3,
-    },
-    {
-        original: bar4,
-        thumbnail: bar4,
-    },
-    {
-        original: bar5,
-        thumbnail: bar5,
-    },
-    {
-        original: bar6,
-        thumbnail: bar6,
-    },
-    {
-        original: bar7,
-        thumbnail: bar7,
-    },
-    {
-        original: bar8,
-        thumbnail: bar8,
-    },
-    {
-        original: bar9,
-        thumbnail: bar9,
-    },
-    {
-        original: bar10,
-        thumbnail: bar10,
-    },
+    bar1,
+    bar2,
+    bar3,
+    bar4,
+    bar5,
+    bar6,
+    bar7,
+    bar8,
+    bar9,
+    bar10,
 ]
 
-export default function BarDetails(){
+export default function BarDetails() {
+    const [show, setShow] = useState(false);
+    const [selectedIndex, setSelectedIndex] = useState(0);
+  
     return (
-             <div><h3>Our Beautiful Bar and Restaurant view images</h3>
-             <div><ImageGallery items={images} /> </div>
-             </div>
-    )
-}
+      <Container>
+        <Header />
+        <Container>
+          <div className="row mt-5">
+            <div className="col-lg-4">
+              <Image
+                className="rounded-circle"
+                width="140"
+                height="140"
+                src={bar1}
+                
+              ></Image>
+              <h2>Bar and restaurant</h2>
+              <p>
+              The emotions you want to inspire in your customers. “Happy” is not enough. Think about the most popular restaurants.
+              </p>
+            </div>
+          </div>
+          <Row>
+            <Col>
+              <ImgGallery
+                data={images}
+                onItemClick={(index: any) => {
+                  /// alert("Index .... " + index);
+                  setSelectedIndex(index);
+                  setShow(true);
+                }}
+              />
+            </Col>
+          </Row>
+  
+          <ImagePreview
+            data={images}
+            selectedItemIndex={selectedIndex}
+            show={show}
+            setShow={setShow}
+          />
+        </Container>
+  
+        <Footer />
+      </Container>
+    );
+  }
+  
