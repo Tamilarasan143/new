@@ -2,6 +2,8 @@ import Header from "../components/header/header";
 import NoTransitionExample from "./homepage/carcoual";
 import Footer from "../components/footer/footer";
 
+
+
 export default function EnquriyPage() {
   return (
     <>
