@@ -10,28 +10,25 @@ export default function EnquriyPage() {
       <Header />
       <NoTransitionExample />
       <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+      
       >
+      
         <div>
-          <table width={"400"}>
+          <table >
             <tr>
-              <td height={"30"}>Name</td>
+              <td >Name</td>
               <td>
                 <input type="text" />
               </td>
             </tr>
             <tr>
-              <td height={"30"}>Email</td>
+              <td >Email</td>
               <td>
                 <input type="email" />
               </td>
             </tr>
             <tr>
-              <td height={"30"}>Mobile</td>
+              <td>Mobile</td>
               <td>
                 <input type="Moble" />
               </td>
@@ -51,16 +48,16 @@ export default function EnquriyPage() {
             </tr>
             <tr>
               <td>
-                <td height={"30"}>Commends</td>
+                <td >Comments</td>
                 <td>
-                  <textarea name=" commends"></textarea>
+                  <textarea name=" comments"></textarea>
                 </td>
               </td>
             </tr>
             <tr>
-              <td height={"50"} align="center"></td>
+              <td align="center"></td>
               <td>
-                <input type="button" value={"Submite"} />
+                <input type="button" value={"Submit"} />
               </td>
             </tr>
           </table>
