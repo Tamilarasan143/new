@@ -16,9 +16,9 @@ export default function ContactPage() {
         </td>
       </tr>
       <tr>
-        <td height="337" valign="top" style={{ backgroundColor: "#FFFFFF" }}>
-          <table width="100%" cellSpacing="0" cellPadding="0">
-            <tr>
+        <td height="337" valign="top">
+          <table width="100%" cellSpacing="0" cellPadding="0"  >
+            <tr style={{ backgroundColor: "#FFFFFF"}}>
               <td width="31%" height="357">
                 <img
                   src={con1}
@@ -30,7 +30,7 @@ export default function ContactPage() {
                 <table width="94%" cellSpacing="0" cellPadding="3">
                   <tr>
                     <td height="351" valign="top">
-                      <div className="padding">
+                      <div className="padding" style={{textAlign:'left'}}>
                         <div className="pageTitle">Contact Us</div>
                         <h2 className="style2">
                           Mithra{" "}

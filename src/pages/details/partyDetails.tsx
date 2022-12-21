@@ -8,7 +8,6 @@ import party6 from '../../assets/images/Party-Hall/party6.jpeg'
 import party7 from '../../assets/images/Party-Hall/party7.jpeg'
 import party8 from '../../assets/images/Party-Hall/party8.jpeg'
 import party9 from '../../assets/images/Party-Hall/party2.jpeg'
-import party10 from '../../assets/images/Party-Hall/party1.jpeg'
 import { Container, Modal, Row } from "react-bootstrap";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -29,7 +28,7 @@ const images = [
     party7,
     party8,
     party9,
-    party10,
+   
 ]
 
 export default function PartyDetails() {
@@ -40,7 +39,7 @@ export default function PartyDetails() {
       <Container>
         <Header />
         <Container>
-          <div className="row mt-5">
+          <div className="row mt-5" style={{display:"flex",alignItems:'center',justifyContent:'center'}}>
             <div className="col-lg-4">
               <Image
                 className="rounded-circle"

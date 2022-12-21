@@ -8,8 +8,7 @@ import bar5 from '../../assets/images/bar/bar5.jpeg'
 import bar6 from '../../assets/images/bar/bar6.jpeg'
 import bar7 from '../../assets/images/bar/bar1.jpeg'
 import bar8 from '../../assets/images/bar/bar2.jpeg'
-import bar9 from '../../assets/images/bar/bar3.jpeg'
-import bar10 from '../../assets/images/bar/bar4.jpeg'
+import bar9 from '../../assets/images/bar/bar1.jpeg'
 import { Container, Modal, Row } from "react-bootstrap";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -29,7 +28,6 @@ const images = [
     bar7,
     bar8,
     bar9,
-    bar10,
 ]
 
 export default function BarDetails() {
@@ -40,14 +38,13 @@ export default function BarDetails() {
       <Container>
         <Header />
         <Container>
-          <div className="row mt-5">
+          <div className="row mt-5" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
             <div className="col-lg-4">
               <Image
                 className="rounded-circle"
                 width="140"
                 height="140"
                 src={bar1}
-                
               ></Image>
               <h2>Bar and restaurant</h2>
               <p>

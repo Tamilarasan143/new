@@ -7,8 +7,6 @@ import spa5 from "../../assets/images/Spa/spa5.jpeg";
 import spa6 from "../../assets/images/Spa/spa6.jpeg";
 import spa7 from "../../assets/images/Spa/spa7.jpeg";
 import spa8 from "../../assets/images/Spa/spa2.jpeg";
-import spa9 from "../../assets/images/Spa/spa6.jpeg";
-import spa10 from "../../assets/images/Spa/spa4.jpeg";
 import { Container, Modal, Row } from "react-bootstrap";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -27,8 +25,7 @@ const images = [
   spa7,
   spa7,
   spa8,
-  spa9,
-  spa10,
+
 ];
 
 export default function SpaDetails() {
@@ -39,7 +36,7 @@ export default function SpaDetails() {
     <Container>
       <Header />
       <Container>
-        <div className="row mt-5">
+        <div className="row mt-5" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
           <div className="col-lg-4">
             <Image
               className="rounded-circle"
