@@ -10,6 +10,11 @@ export default function EnquriyPage() {
       <Header />
       <NoTransitionExample />
       <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
       
       >
       
@@ -42,10 +47,11 @@ export default function EnquriyPage() {
                   <option>Party Hall</option>
                   <option>Business Meeting</option>
                   <option>Birthday Hall</option>
-                  <option>Other</option>
+                  <option>Others</option>
                 </select>
               </td>
             </tr>
+            <div>
             <tr>
               <td>
                 <td >Comments</td>
@@ -54,8 +60,9 @@ export default function EnquriyPage() {
                 </td>
               </td>
             </tr>
+            </div>
             <tr>
-              <td align="center"></td>
+              <td style={{textAlign:'center'}}></td>
               <td>
                 <input type="button" value={"Submit"} />
               </td>
