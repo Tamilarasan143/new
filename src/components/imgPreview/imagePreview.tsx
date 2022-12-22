@@ -19,7 +19,7 @@ export default function ImagePreview(prop: Props) {
       onHide={() => prop.setShow(false)}
     >
       <Modal.Header closeButton>
-        <Modal.Title>Modal</Modal.Title>
+        <Modal.Title>Spa</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <ImageGallery items={images} />

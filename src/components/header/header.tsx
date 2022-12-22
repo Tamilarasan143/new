@@ -27,6 +27,7 @@ export default function Header() {
                 <Nav.Link ><Link to={'enquiry'}>Enquriy</Link></Nav.Link>
                 <Nav.Link ><Link to={'contact-us'}>Contact</Link></Nav.Link>
                 <Nav.Link ><Link to={'aboutus'}>Aboutus</Link></Nav.Link>
+                <Nav.Link ><Link to={'login'}>Login/Register</Link></Nav.Link>
                 <Nav.Link eventKey={2}><Link to={'myacc'}>Myaccount</Link></Nav.Link>                
               </Nav>
             </div>
