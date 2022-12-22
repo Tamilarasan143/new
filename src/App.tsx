@@ -8,9 +8,9 @@ import ContactPage from "./pages/contactuspage";
 import BarDetails from "./pages/details/barDetails";
 import PartyDetails from "./pages/details/partyDetails";
 import EnquriyPage from "./pages/enquriypage";
-import MyaccountPage from "./pages/account/myaccountpage";
+import MyaccountPage from "./pages/login/myaccountpage";
 import SpaDetails from "./pages/details/spaDetails";
-import Signup from "./pages/account/signup";
+import Signup from "./pages/register/signup";
 
 function App() {
   return (

@@ -5,8 +5,7 @@ import {
   Button,
   Container,
   Figure,
-  FloatingLabel,
-  Form,
+
   Row,
 } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
@@ -39,7 +38,7 @@ export default function EnquriyPage() {
               Mobile
               <input style={{ marginLeft: "9%" }} type={"Mobile"} required />
             </div>
-            <div style={{ marginTop: "2%",justifyContent:'center'}}>
+            <div style={{ marginTop: "2%", justifyContent: 'center' }}>
               Enquriy Type*
               <select style={{ marginLeft: "9%" }} value="Choose...">
                 <option>Choose...</option>

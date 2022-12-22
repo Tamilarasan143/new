@@ -7,12 +7,7 @@ import Main from "./main";
 
 export default function HomePage() {
   return (
-    <div
-    style={{
-      backgroundColor:"white"
-    }}
-    >
-      
+    <div >
       <Header />
       <NoTransitionExample />
       <Main />
