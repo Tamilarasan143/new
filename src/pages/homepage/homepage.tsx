@@ -7,11 +7,15 @@ import Main from "./main";
 
 export default function HomePage() {
   return (
-    <>
+    <div
+    style={{
+      backgroundColor:"white"
+    }}
+    >
       <Header />
       <NoTransitionExample />
       <Main />
       <Footer />
-    </>
+    </div>
   );
 }

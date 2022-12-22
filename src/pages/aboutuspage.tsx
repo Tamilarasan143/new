@@ -8,7 +8,6 @@ import img1 from "../assets/images/facilitiestariff.jpg";
 import img2 from "../assets/images/membershiptariff.jpg";
 import img3 from "../assets/images/routemap.jpg";
 
-
 export default function AboutusPage() {
   return (
     <>
@@ -23,7 +22,7 @@ export default function AboutusPage() {
       >
         <tr>
           <td
-            width="197"
+            width="180"
             height="337"
             valign="top"
             style={{ backgroundColor: "#dbdad9" }}
@@ -77,7 +76,7 @@ export default function AboutusPage() {
               </div>
             </div>
           </td>
-          <td width="1004" valign="top" style={{ backgroundColor: "#FFFFFF" }}>
+          <td width="930" valign="top" style={{ backgroundColor: "#FFFFFF" }}>
             <table width="100%">
               <tr>
                 <td valign="top">
@@ -109,28 +108,37 @@ export default function AboutusPage() {
                   <table width="100%" cellSpacing="0" cellPadding="5">
                     <tr>
                       <td width="32%" height="110">
-                        <div className="nare" style={{ textAlign: "center", width: "200", height: "96" }}>
-                          <img
-                            src={img1}
-                            alt="logo"
-                          
-                          />
+                        <div
+                          className="nare"
+                          style={{
+                            textAlign: "center",
+                            width: "200",
+                            height: "96",
+                          }}
+                        >
+                          <img src={img1} alt="logo" />
                         </div>
                       </td>
                       <td width="36%">
-                        <div style={{ textAlign: "center",width:"200",height:"96" }}>
-                          <img
-                            src={img2}
-                            
-                          />
+                        <div
+                          style={{
+                            textAlign: "center",
+                            width: "200",
+                            height: "96",
+                          }}
+                        >
+                          <img src={img2} />
                         </div>
                       </td>
                       <td width="32%">
-                        <div style={{ textAlign: "center",width:"200",height:"96" }}>
-                          <img
-                            src={img3}
-                           
-                          />
+                        <div
+                          style={{
+                            textAlign: "center",
+                            width: "200",
+                            height: "96",
+                          }}
+                        >
+                          <img src={img3} />
                         </div>
                       </td>
                     </tr>
