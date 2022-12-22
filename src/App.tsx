@@ -25,7 +25,7 @@ function App() {
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="aboutus" element={<AboutusPage />} />
           <Route path="myacc" element={<MyaccountPage />} />
-          <Route path="singup" element={<Signup/>} />
+          <Route path="signup" element={<Signup/>} />
         </Routes>
       </Router>
     </div>
