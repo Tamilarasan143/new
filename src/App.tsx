@@ -8,8 +8,9 @@ import ContactPage from "./pages/contactuspage";
 import BarDetails from "./pages/details/barDetails";
 import PartyDetails from "./pages/details/partyDetails";
 import EnquriyPage from "./pages/enquriypage";
-import MyaccountPage from "./pages/myaccountpage";
+import MyaccountPage from "./pages/account/myaccountpage";
 import SpaDetails from "./pages/details/spaDetails";
+import Signup from "./pages/account/signup";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="aboutus" element={<AboutusPage />} />
           <Route path="myacc" element={<MyaccountPage />} />
+          <Route path="signup" element={<Signup/>} />
         </Routes>
       </Router>
     </div>

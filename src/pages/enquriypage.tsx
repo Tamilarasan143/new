@@ -12,6 +12,8 @@ import {
 import Col from "react-bootstrap/Col";
 import con1 from "../assets/images/enquiry.gif";
 
+
+
 export default function EnquriyPage() {
   return (
     <>
