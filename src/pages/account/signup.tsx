@@ -41,7 +41,7 @@ function Signup() {
                 Submit
                </Button>
                <br></br>
-               <Link to={'/myacc'}>Already have an account? Sign in</Link>
+               <Link to={'/myacc'}style={{textAlign:"left",fontSize:"12px"}}>Already have an account? Sign in</Link>
                <br></br>
                <br></br>
                <div style={{textAlign:"center"}} className="copyright">Copyright@2022, Allrights reserved Mithra</div>

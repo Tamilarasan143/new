@@ -54,7 +54,7 @@ createUserWithEmailAndPassword(auth, email, password)
       <Button  className="mb-3" variant="primary" type="submit" onClick={signin}>
         Submit
       </Button><br></br>
-      <Link to={'/signup'}>Don't have an account? Sign Up</Link>
+      <Link to={'/signup'} style={{textAlign:"right",fontSize:"12px"}}>Don't have an account? Sign Up</Link>
       <br></br>
       <br></br>
       <div style={{textAlign:"left"}} className="copyright">Copyright@2022, Allrights reserved Mithra</div>
