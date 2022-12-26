@@ -1,0 +1,11 @@
+.round{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background-color:#9034a9;    
+    color: #FFF;
+    text-align: center;
+}

@@ -8,7 +8,7 @@ import ContactPage from "./pages/contactuspage";
 import BarDetails from "./pages/details/barDetails";
 import PartyDetails from "./pages/details/partyDetails";
 import EnquriyPage from "./pages/enquriypage";
-import MyaccountPage from "./pages/login/myaccountpage";
+import LoginPage from "./pages/login/loginpage";
 import SpaDetails from "./pages/details/spaDetails";
 import Signup from "./pages/register/signup";
 
@@ -24,8 +24,9 @@ function App() {
           <Route path="enquiry" element={<EnquriyPage />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="aboutus" element={<AboutusPage />} />
-          <Route path="myacc" element={<MyaccountPage />} />
-          <Route path="signup" element={<Signup/>} />
+          {/* <Route path="myacc" element={< />} /> */}
+          <Route path="register" element={<Signup/>} />
+          <Route path="login" element={<LoginPage/>} />
         </Routes>
       </Router>
     </div>
