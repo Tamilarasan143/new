@@ -1,17 +1,18 @@
 import React from "react";
-import Header from "../../components/header/header";
-import NoTransitionExample from "./carcoual";
 import Footer from "../../components/footer/footer";
-import Main from "./main";
-
+import Header from "../../components/header/header";
+import HomeContent from "./content";
+import ImageSlider from "./slider";
+// import ImageSlider from "./slider";
+// import Main from "./main";
 
 export default function HomePage() {
   return (
-    <div >
+    <>
       <Header />
-      <NoTransitionExample />
-      <Main />
+      <ImageSlider />
+      <HomeContent />
       <Footer />
-    </div>
+    </>
   );
 }

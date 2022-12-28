@@ -1,23 +1,15 @@
 import Header from "../components/header/header";
-import NoTransitionExample from "./homepage/carcoual";
+import ImageSlider from "./homepage/slider";
 import Footer from "../components/footer/footer";
-import {
-  Button,
-  Container,
-  Figure,
-
-  Row,
-} from "react-bootstrap";
+import { Button, Container, Figure, Row } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import con1 from "../assets/images/enquiry.gif";
-
-
 
 export default function EnquriyPage() {
   return (
     <>
       <Header />
-      <NoTransitionExample />
+      <ImageSlider />
       <Container>
         <Row>
           <Col style={{ border: "", backgroundColor: "white" }} sm={4}>
@@ -38,7 +30,7 @@ export default function EnquriyPage() {
               Mobile
               <input style={{ marginLeft: "9%" }} type={"Mobile"} required />
             </div>
-            <div style={{ marginTop: "2%", justifyContent: 'center' }}>
+            <div style={{ marginTop: "2%", justifyContent: "center" }}>
               Enquriy Type*
               <select style={{ marginLeft: "9%" }} value="Choose...">
                 <option>Choose...</option>

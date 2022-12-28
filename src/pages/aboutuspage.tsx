@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../components/header/header";
-import NoTransitionExample from "./homepage/carcoual";
+import ImageSlider from "./homepage/slider";
 import Footer from "../components/footer/footer";
-import "../components/header/home.css";
 import img0 from "../assets/images/Fcl_header.gif";
 import img1 from "../assets/images/facilitiestariff.jpg";
 import img2 from "../assets/images/membershiptariff.jpg";
@@ -12,7 +11,7 @@ export default function AboutusPage() {
   return (
     <>
       <Header />
-      <NoTransitionExample />
+      <ImageSlider />
       <div
         style={{
           display: "flex",

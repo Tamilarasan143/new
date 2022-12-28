@@ -1,5 +1,5 @@
 import Header from "../components/header/header";
-import NoTransitionExample from "./homepage/carcoual";
+import ImageSlider from "./homepage/slider";
 import Footer from "../components/footer/footer";
 import { Button, Col, Container, Figure, Row } from "react-bootstrap";
 import con1 from "../assets/images/contactus.gif";
@@ -8,7 +8,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <NoTransitionExample />
+      <ImageSlider />
       <Container>
         <Row>
           <Col
@@ -78,7 +78,6 @@ export default function ContactPage() {
                     </h2>
                   </div>
 
-                  
                   <div>
                     <h6 style={{ textAlign: "left", color: "#333333" }}>
                       <p>

@@ -8,7 +8,7 @@ import img5 from "../../assets/images/homepage/Party.jpeg";
 import img6 from "../../assets/images/homepage/Bar.jpeg";
 import { Link } from "react-router-dom";
 
-export default function Main() {
+export default function HomeContent() {
   return (
     <div>
       <div className="container marketing">
