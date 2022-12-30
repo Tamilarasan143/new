@@ -4,6 +4,8 @@ import Footer from "../components/footer/footer";
 import { Button, Container, Figure, Row } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import con1 from "../assets/images/enquiry.gif";
+import React from "react";
+
 
 export default function EnquriyPage() {
   return (

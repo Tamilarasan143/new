@@ -3,6 +3,7 @@ import ImageSlider from "./homepage/slider";
 import Footer from "../components/footer/footer";
 import { Button, Col, Container, Figure, Row } from "react-bootstrap";
 import con1 from "../assets/images/contactus.gif";
+import React from "react";
 
 export default function ContactPage() {
   return (

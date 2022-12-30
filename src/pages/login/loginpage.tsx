@@ -11,7 +11,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CircleAvatar from '../../components/circleavatar/circleAvatar';
-
+import React from 'react';
 
 
 

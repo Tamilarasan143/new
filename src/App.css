@@ -9,3 +9,7 @@ body {
   height: 100%;
   display: block;
 }
+
+.layout-sidebar {
+  padding: 0 !important;
+}

@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fortawesome/fontawesome-svg-core/styles.css'
-
+import { Sidebar, Menu, MenuItem, SubMenu,ProSidebarProvider,useProSidebar } from "react-pro-sidebar";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ProSidebarProvider>    <App /></ProSidebarProvider>
+
   </React.StrictMode>
 );
 
