@@ -7,27 +7,30 @@ import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
 
 
-
 export default function Header() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <>
+      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">
-          <img src={img0} alt="logo" style={{ height: "52px" }} />
-        </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
+        <Navbar.Brand href="#home"><img src={img0} alt="logo" style={{ width:"100%",height: "30px" }} /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+          </Nav>
           <Nav>
-            <Link to={'/'} className="nav-link">Home</Link>
-            <Link className="nav-link" to={'enquiry'}>Enquriy</Link>
-            <Link className="nav-link" to={'contact-us'}>Contact</Link>
-            <Link className="nav-link" to={'aboutus'}>Aboutus</Link>
-            <Link className="nav-link" to={'login'}>Login</Link>
-            <Link className="nav-link" to={'register'}>Register</Link>
-            <Link className="nav-link" to={'acc'}>Myaccount</Link>
+            <Link className="naren"  to={'/'}>Home</Link>
+            <Link className="naren" to={'enquiry'}>Enquriy</Link>
+            <Link className="naren" to={'contact-us'}>Contact</Link>
+            <Link className="naren" to={'aboutus'}>Aboutus</Link>
+            <Link className="naren" to={'login'}>Login</Link>
+            <Link className="naren" to={'register'}>Register</Link>
+            <Nav.Link className="naren" eventKey={2} >
+            Myaccount
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+     </>
   );
 }
