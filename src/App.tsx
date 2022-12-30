@@ -19,15 +19,15 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="details/spa" element={<SpaDetails />} />
+        {/* <Route path="/" element={<HomePage />} /> */}
+        {/* <Route path="details/spa" element={<SpaDetails />} />
         <Route path="details/bar" element={<BarDetails />} />
         <Route path="details/party" element={<PartyDetails />} />
         <Route path="enquiry" element={<EnquriyPage />} />
         <Route path="contact-us" element={<ContactPage />} />
         <Route path="aboutus" element={<AboutusPage />} />
         <Route path="register" element={<Signup />} />
-        <Route path="login" element={<LoginPage />} />
+        <Route path="login" element={<LoginPage />} /> */}
         <Route path="acc" element={<MyAccount />}>
           <Route path="" element={<MyDashboard />} />
           <Route path="users" element={<UsersList />} />
