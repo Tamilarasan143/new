@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Outlet } from "react-router";
-
+import React from "react";
 import "./layout.css";
 import MyAccountHeader from "./header";
 import MySideBar from "./sidebar";
