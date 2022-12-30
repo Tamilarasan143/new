@@ -25,14 +25,14 @@
   background-color: #0e5c9f;
   text-align: center;
 }
-li {
+.li {
   display: inline-block;
   padding: 10px 20px;
 }
-li:hover {
+.li:hover {
   background-color: #2779bf;
 }
-li > a {
+.li > a {
   color: white;
   text-decoration: none;
 }
