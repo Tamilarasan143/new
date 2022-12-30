@@ -36,13 +36,13 @@ export default function Header() {
                 <Link to={"/"}> Aboutus</Link>
               </Nav.Link>
               <Nav.Link as={"li"}>
-                <Link to={"/"}>Login</Link>
+                <Link to={"/login"}>Login</Link>
               </Nav.Link>
               <Nav.Link as={"li"}>
-                <Link to={"/"}>Register </Link>
+                <Link to={"/register"}>Register </Link>
               </Nav.Link>
               <Nav.Link eventKey={2}>
-                <Link to={"/"}> Myaccount</Link>
+                <Link to={"/acc"}> Myaccount</Link>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

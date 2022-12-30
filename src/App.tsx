@@ -10,10 +10,12 @@ import LoginPage from "./pages/login/loginpage";
 import SpaDetails from "./pages/details/spaDetails";
 import Signup from "./pages/register/signup";
 import MyAccount from "./pages/my-account/layout";
-import MyDashboard from "./pages/my-account/dashboard";
 import { HashRouter } from "react-router-dom";
 import "./App.css";
 import UsersList from "./pages/my-account/users";
+import GuestRoomReservation from "./pages/guest-rooms";
+import { AdminDashboard } from "./pages/dashboard";
+import MyCalender from "./pages/calender";
 
 function App() {
   return (
@@ -29,11 +31,14 @@ function App() {
         <Route path="register" element={<Signup />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="acc" element={<MyAccount />}>
-          <Route path="" element={<MyDashboard />} />
+          <Route path="" element={<AdminDashboard />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="calendar" element={<MyCalender />} />
           <Route path="users" element={<UsersList />} />
-          <Route path="events" element={<MyDashboard />} />
-          <Route path="events/reservations" element={<MyDashboard />} />
-          <Route path="bars" element={<MyDashboard />} />
+          <Route path="events" element={<AdminDashboard />} />
+          <Route path="events/reservations" element={<AdminDashboard />} />
+          <Route path="bars" element={<AdminDashboard />} />
+          <Route path="guest/reservation" element={<GuestRoomReservation />} />
         </Route>
       </Routes>
     </HashRouter>
