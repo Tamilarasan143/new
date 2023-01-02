@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { faBars, faUsers, faList, faMoneyBill, faHotel, faIndianRupeeSign, faCartShopping, faBug, faDollarSign, faCheckToSlot, faChampagneGlasses } from '@fortawesome/free-solid-svg-icons';
 
+
 export default function MyAccount() {
   const { collapseSidebar } = useProSidebar();
   return (
@@ -19,7 +20,7 @@ export default function MyAccount() {
             </SubMenu>
             <SubMenu className="layout-sidebar" icon={<FontAwesomeIcon icon={faMoneyBill} />} label="Events">
               <MenuItem icon={<FontAwesomeIcon icon={faCheckToSlot} />}>Reservation  </MenuItem>
-              <MenuItem icon={<FontAwesomeIcon icon={faMoneyBill} />}> Events</MenuItem>
+              <MenuItem icon={<FontAwesomeIcon icon={faMoneyBill} />}> Events </MenuItem>
               <MenuItem icon={<FontAwesomeIcon icon={faDollarSign} />}> Expense  </MenuItem>
               <MenuItem icon={<FontAwesomeIcon icon={faBug} />}> Reports </MenuItem>
             </SubMenu>

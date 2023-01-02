@@ -24,9 +24,9 @@ export default function Header() {
             <Link className="naren" to={'aboutus'}>Aboutus</Link>
             <Link className="naren" to={'login'}>Login</Link>
             <Link className="naren" to={'register'}>Register</Link>
-            <Nav.Link className="naren" eventKey={2} >
+            <Nav.Link eventKey={2}><Link className="naren" to={"acc"} >
             Myaccount
-            </Nav.Link>
+            </Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

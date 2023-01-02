@@ -14,6 +14,8 @@ import MyDashboard from "./pages/my-account/dashboard";
 import { HashRouter } from "react-router-dom";
 import "./App.css";
 import UsersList from "./pages/my-account/users";
+import Calendar from "./pages/my-account/calendar";
+
 
 function App() {
   return (
@@ -34,6 +36,7 @@ function App() {
           <Route path="events" element={<MyDashboard />} />
           <Route path="events/reservations" element={<MyDashboard />} />
           <Route path="bars" element={<MyDashboard />} />
+          <Route path="Calendar" element={<Calendar />} />
         </Route>
       </Routes>
     </HashRouter>
