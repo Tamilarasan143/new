@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/homepage/homepage";
 import AboutusPage from "./pages/aboutuspage";
@@ -17,33 +17,57 @@ import GuestRoomReservation from "./pages/guest-rooms";
 import { AdminDashboard } from "./pages/dashboard";
 import MyCalender from "./pages/calender";
 import MembershipList from "./pages/membership/membership";
+import { Spinner } from "react-bootstrap";
+import { UserContextProvider } from "./data/providers/users";
+import appConfig from "./data/common/config/app-config";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    appConfig.init().then((e) => {
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="container d-flex align-items-center justify-content-center vh-100">
+        <Spinner animation="border" variant="success" />
+      </div>
+    );
+  }
+
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="details/spa" element={<SpaDetails />} />
-        <Route path="details/bar" element={<BarDetails />} />
-        <Route path="details/party" element={<PartyDetails />} />
-        <Route path="enquiry" element={<EnquriyPage />} />
-        <Route path="contact-us" element={<ContactPage />} />
-        <Route path="aboutus" element={<AboutusPage />} />
-        <Route path="register" element={<Signup />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="acc" element={<MyAccount />}>
-          <Route path="" element={<AdminDashboard />} />
-          <Route path="members/list" element={<MembershipList />} />
-          <Route path="dashboard" element={<AdminDashboard />} />
-          <Route path="calendar" element={<MyCalender />} />
-          <Route path="users" element={<UsersList />} />
-          <Route path="events" element={<AdminDashboard />} />
-          <Route path="events/reservations" element={<AdminDashboard />} />
-          <Route path="bars" element={<AdminDashboard />} />
-          <Route path="guest/reservation" element={<GuestRoomReservation />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+    <UserContextProvider>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="details/spa" element={<SpaDetails />} />
+          <Route path="details/bar" element={<BarDetails />} />
+          <Route path="details/party" element={<PartyDetails />} />
+          <Route path="enquiry" element={<EnquriyPage />} />
+          <Route path="contact-us" element={<ContactPage />} />
+          <Route path="aboutus" element={<AboutusPage />} />
+          <Route path="register" element={<Signup />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="acc" element={<MyAccount />}>
+            <Route path="" element={<AdminDashboard />} />
+            <Route path="members/list" element={<MembershipList />} />
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="calendar" element={<MyCalender />} />
+            <Route path="users" element={<UsersList />} />
+            <Route path="events" element={<AdminDashboard />} />
+            <Route path="events/reservations" element={<AdminDashboard />} />
+            <Route path="bars" element={<AdminDashboard />} />
+            <Route
+              path="guest/reservation"
+              element={<GuestRoomReservation />}
+            />
+          </Route>
+        </Routes>
+      </HashRouter>
+    </UserContextProvider>
   );
 }
 

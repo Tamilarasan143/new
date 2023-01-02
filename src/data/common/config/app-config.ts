@@ -9,12 +9,12 @@ class AppConfig {
 
 	async init(): Promise<boolean> {
 		console.log("#app.init:  started")
-		const app = initializeApp(firebaseConfig)
-		const auth = getAuth(app)
-		await setPersistence(auth, browserLocalPersistence)
-		if (auth.currentUser) {
-			await auth.currentUser.getIdToken(false)
-		}
+		// const app = initializeApp(firebaseConfig)
+		// const auth = getAuth(app)
+		// await setPersistence(auth, browserLocalPersistence)
+		// if (auth.currentUser) {
+		// 	await auth.currentUser.getIdToken(false)
+		// }
 		console.log("#app.init:  Completed")
 		return true
 	}

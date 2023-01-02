@@ -1,10 +1,23 @@
-import { Outlet } from "react-router";
+import { Navigate, Outlet, useLocation } from "react-router";
 import React from "react";
 import "./layout.css";
 import MyAccountHeader from "./header";
 import MySideBar from "./sidebar";
+import { useUser } from "../../data/providers/users/hooks";
 
 export default function MyAccount() {
+  const user = useUser();
+  const location = useLocation();
+
+  if (!user) {
+    // Redirect them to the /login page, but save the current location they were
+    // trying to go to when they were redirected. This allows us to send them
+    // along to that page after they login, which is a nicer user experience
+    // than dropping them off on the home page.
+    console.log("Redirect to login ", location);
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
   return (
     <>
       <div className="container-fluid vh-100">
