@@ -1,43 +1,54 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Outlet } from "react-router";
-import { Sidebar, Menu, MenuItem, SubMenu, ProSidebarProvider, useProSidebar } from "react-pro-sidebar";
 import React from "react";
-import Button from 'react-bootstrap/Button';
-import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
-import { faBars, faUsers, faList, faMoneyBill, faHotel, faIndianRupeeSign, faCartShopping, faBug, faDollarSign, faCheckToSlot, faChampagneGlasses } from '@fortawesome/free-solid-svg-icons';
+import "./layout.css";
+import MyAccountHeader from "./header";
+import MySideBar from "./sidebar";
 
 
 export default function MyAccount() {
-  const { collapseSidebar } = useProSidebar();
   return (
     <>
-      <Container className="fluid" style={{ display: 'flex', height: '100%', position: 'absolute' }}>
-        <Sidebar>
-          <Menu>
-            <Button className="justify-content-end" variant="light" onClick={() => collapseSidebar()}><FontAwesomeIcon icon={faBars} /></Button>
-            <SubMenu className="layout-sidebar" icon={<FontAwesomeIcon icon={faUsers} />} label="Users">
-              <MenuItem icon={<FontAwesomeIcon icon={faList} />}> List </MenuItem>
-            </SubMenu>
-            <SubMenu className="layout-sidebar" icon={<FontAwesomeIcon icon={faMoneyBill} />} label="Events">
-              <MenuItem icon={<FontAwesomeIcon icon={faCheckToSlot} />}>Reservation  </MenuItem>
-              <MenuItem icon={<FontAwesomeIcon icon={faMoneyBill} />}> Events </MenuItem>
-              <MenuItem icon={<FontAwesomeIcon icon={faDollarSign} />}> Expense  </MenuItem>
-              <MenuItem icon={<FontAwesomeIcon icon={faBug} />}> Reports </MenuItem>
-            </SubMenu>
-            <SubMenu className="layout-sidebar" icon={<FontAwesomeIcon icon={faChampagneGlasses} />} label="Bar">
-              <MenuItem icon={<FontAwesomeIcon icon={faCartShopping} />}> Purchase  </MenuItem>
-              <MenuItem icon={<FontAwesomeIcon icon={faIndianRupeeSign} />}> Sales</MenuItem>
-              <MenuItem icon={<FontAwesomeIcon icon={faBug} />}> Report</MenuItem>
-            </SubMenu>
-            <SubMenu className="layout-sidebar" icon={<FontAwesomeIcon icon={faHotel} />} label="Rooms">
-              <MenuItem icon={<FontAwesomeIcon icon={faCheckToSlot} />}> Reservations </MenuItem>
-              <MenuItem icon={<FontAwesomeIcon icon={faBug} />}>Reports</MenuItem>
-
-            </SubMenu>
-          </Menu>
-        </Sidebar>
-        <Outlet />
-      </Container>
+      <MyAccountHeader />
+      <div className="container-fluid">
+        <div className="row">
+          <MySideBar />
+          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h1 className="h2">Dashboard</h1>
+              <div className="btn-toolbar mb-2 mb-md-0">
+                <div className="btn-group me-2">
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-outline-secondary"
+                  >
+                    Share
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-sm btn-outline-secondary"
+                  >
+                    Export
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  className="btn btn-sm btn-outline-secondary dropdown-toggle"
+                >
+                  <span data-feather="calendar"></span>
+                  This week
+                </button>
+              </div>
+            </div>
+            <Outlet />
+          </main>
+        </div>
+      </div>
+      <footer className="footer mt-auto py-3 bg-light">
+        <div className="container">
+          <span className="text-muted">Place sticky footer content here.</span>
+        </div>
+      </footer>
     </>
   );
 }
