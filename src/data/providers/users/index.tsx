@@ -5,28 +5,32 @@ import {
   getAuth,
   sendPasswordResetEmail,
   signOut,
-  User,
+  UserCredential,
 } from "firebase/auth";
 import React, { useMemo, useState } from "react";
-import restClient from "../../common/restClient";
 import settings from "../../common/settings";
-import UserContext, { UserApiResult, UserDetails } from "./userContext";
+import UserContext, {
+  AccountStatus,
+  UserApiResult,
+  UserDetails,
+} from "./userContext";
 
-function toUserDetails(fbUser: User, data: any) {
+function getUser(usr: UserCredential): UserDetails {
   return {
-    name: fbUser.displayName || fbUser.email || "",
-    email: fbUser.email || "",
-    photoUrl: fbUser.photoURL || "man",
-    role: data?.role || "Admin2",
-    mobile: fbUser.phoneNumber || undefined,
-    data: data,
-    status: data.status,
+    name: usr.user.displayName || usr.user.email || "",
+    email: usr.user.email || "",
+    photoUrl: usr.user.photoURL || "man",
+    role: "guest",
+    mobile: usr.user.phoneNumber || undefined,
+    status: AccountStatus.ACTIVATED,
   };
 }
 
 export const UserContextProvider = ({ children }: any) => {
   const [loading, setLoading] = useState(false);
-  const [user, setLoggedUser] = useState<UserDetails>();
+  const [user, setLoggedUser] = useState<UserDetails | undefined>(
+    settings.getLocalUser()
+  );
 
   const auth = getAuth(getApp());
 
@@ -41,7 +45,8 @@ export const UserContextProvider = ({ children }: any) => {
     return new Promise((resolve) => {
       setLoading(true);
       signInWithEmailAndPassword(auth, email, password)
-        .then((usr) => {
+        .then((res: any) => {
+          setUser(res);
           resolve({
             success: true,
             user,
@@ -106,21 +111,11 @@ export const UserContextProvider = ({ children }: any) => {
       setLoading(true);
       console.log("email ", email);
       createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          // Update profile
-          const data = { name: name, mobile: mobile, source: "WEB" };
-          restClient.post("/users/register", data).then((res) => {
-            setLoading(false);
-            if (res.ok) {
-              //setUser(toUserDetails(userCredential.user, res.value));
-              resolve({ success: true });
-            } else {
-              resolve({
-                success: false,
-                errorCode: res.error.code,
-                errorMessage: res.error.message,
-              });
-            }
+        .then((res) => {
+          setUser(res);
+          resolve({
+            success: true,
+            user,
           });
         })
         .catch((error) => {
@@ -131,72 +126,24 @@ export const UserContextProvider = ({ children }: any) => {
             errorMessage: error.message,
           });
         });
-      // resolve({ result: false, errorCode: 1400, errorMessage: "Unknow error" })
     });
   }
 
-  function joinNow(name?: string, email?: string): Promise<UserApiResult> {
-    return new Promise((resolve) => {
-      setLoading(true);
-      // Update profile
-      const data = { name: name, email: email, source: "WEB" };
-      restClient.post("/users/register", data).then((res) => {
-        setLoading(false);
-        if (res.ok) {
-          //setUser(toUserDetails(getAuth().currentUser!!, res.value));
-          resolve({ success: true });
-        } else {
-          resolve({
-            success: false,
-            errorCode: res.error.code,
-            errorMessage: res.error.message,
-          });
-        }
-      });
-    });
-  }
-
-  async function updateProfile(
-    name?: string,
-    mobile?: string
-  ): Promise<UserApiResult> {
-    return new Promise((resolve) => {
-      setLoading(true);
-      const data = { name: name, mobile: mobile };
-      restClient.post("/users/me", data).then((res) => {
-        setLoading(false);
-        if (res.ok) {
-          setUser(toUserDetails(getAuth().currentUser!!, res.value));
-          resolve({ success: true });
-        } else {
-          resolve({
-            success: false,
-            errorCode: res.error.code,
-            errorMessage: res.error.message,
-          });
-        }
-      });
-    });
-  }
-
-  function setUser(user: UserDetails) {
-    settings.setLocalUser(user);
-    setLoggedUser(user);
+  function setUser(credential: UserCredential) {
+    const usr = getUser(credential);
+    settings.setLocalUser(usr);
+    setLoggedUser(usr);
   }
 
   const memoedValue = useMemo(
     () => ({
       loading,
       user,
-
       showProgress,
       login,
-      //  loginWithSSO,
       logout,
       resetPassword,
       createAccount,
-      joinNow,
-      updateProfile,
     }),
     [loading, user]
   );

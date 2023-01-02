@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
-import { getAuth } from "@firebase/auth"
 import axios, { Axios } from "axios"
-import appConfig from "./config/app-config"
+import appConfig from "../config/app-config"
 import settings from "./settings"
 import { ApiError, Result } from "./result"
 

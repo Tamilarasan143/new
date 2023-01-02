@@ -1,38 +1,50 @@
 import "./header.css";
 import React from "react";
+import { Container, Navbar, NavDropdown } from "react-bootstrap";
+import { useUserContext } from "../../data/providers/users/hooks";
+import { useNavigate } from "react-router";
+import img0 from "../../assets/images/logo/logo.gif";
+
+import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
+
 export default function MyAccountHeader() {
+  const { user, logout } = useUserContext();
+  const navigate = useNavigate();
   return (
-    <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-      <a
-        className="navbar-brand col-auto col-md-2 col-xl-2 px-sm-2 px-3"
-        href="/acc"
-      >
-        Mithra Resorts & Club
-      </a>
-      <button
-        className="navbar-toggler position-absolute d-md-none collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#sidebarMenu"
-        aria-controls="sidebarMenu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <input
-        className="form-control form-control-dark w-100"
-        type="text"
-        placeholder="Search"
-        aria-label="Search"
-      />
-      <div className="navbar-nav">
-        <div className="nav-item text-nowrap">
-          <a className="nav-link px-3" href="/">
-            Sign out
-          </a>
-        </div>
-      </div>
-    </header>
+    <Navbar collapseOnSelect bg="primary" variant="dark">
+      <Container>
+        <Navbar.Brand href="/acc">
+          <img
+            src={img0}
+            alt="Mithra Resorts & Club"
+            className=""
+            style={{ height: "30px" }}
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Nav className="me-auto"></Nav>
+
+          <Nav>
+            <NavDropdown title={user?.name} id="collasible-nav-dropdown">
+              <NavDropdown.Item as={"li"}>
+                <Link to={"/acc/myaccount"}> My Account </Link>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                onClick={() => {
+                  logout().then((r) => {
+                    navigate("/");
+                  });
+                }}
+              >
+                Logout
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }

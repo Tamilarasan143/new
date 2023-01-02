@@ -34,8 +34,6 @@ export interface IUserContext {
     login(email: string, password: string): Promise<UserApiResult>
     resetPassword(email: string): Promise<UserApiResult>
     createAccount(name: string, email: string, password: string, mobile?: string): Promise<UserApiResult>
-    joinNow(name?: string, email?: string): Promise<UserApiResult>
-    updateProfile(name?: string, mobile?: string): Promise<UserApiResult>
     logout(): Promise<Boolean>
 
 }

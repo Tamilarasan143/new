@@ -11,5 +11,5 @@ export function useUserContext() {
 
 export function useUser() {
     const ctx = useContext(UserContext);
-    return { ...ctx.user };
+    return ctx.user;
 }

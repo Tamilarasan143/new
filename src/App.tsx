@@ -19,7 +19,8 @@ import MyCalender from "./pages/calender";
 import MembershipList from "./pages/membership/membership";
 import { Spinner } from "react-bootstrap";
 import { UserContextProvider } from "./data/providers/users";
-import appConfig from "./data/common/config/app-config";
+import appConfig from "./data/config/app-config";
+import Error404 from "./components/errors/e404";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ function App() {
           <Route path="aboutus" element={<AboutusPage />} />
           <Route path="register" element={<Signup />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="*" element={<Error404 />} />
           <Route path="acc" element={<MyAccount />}>
             <Route path="" element={<AdminDashboard />} />
             <Route path="members/list" element={<MembershipList />} />
@@ -64,6 +66,7 @@ function App() {
               path="guest/reservation"
               element={<GuestRoomReservation />}
             />
+            <Route path="*" element={<Error404 />} />
           </Route>
         </Routes>
       </HashRouter>
