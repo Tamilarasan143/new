@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "../components/header/header";
-import ImageSlider from "./homepage/slider";
-import Footer from "../components/footer/footer";
-import img0 from "../assets/images/Fcl_header.gif";
+import Header from "./homepage/header/header";
+import ImageSlider from "./homepage/image-slider";
+import img0 from "../assets/images/fcl_header.gif";
 import img1 from "../assets/images/facilitiestariff.jpg";
 import img2 from "../assets/images/membershiptariff.jpg";
 import img3 from "../assets/images/routemap.jpg";
+import Footer from "./homepage/footer/footer";
 
 export default function AboutusPage() {
   return (

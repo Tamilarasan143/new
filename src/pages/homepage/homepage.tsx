@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../../components/footer/footer";
-import Header from "../../components/header/header";
+import Header from "./header/header";
 import HomeContent from "./content";
-import ImageSlider from "./slider";
+import ImageSlider from "./image-slider";
+import Footer from "./footer/footer";
 // import ImageSlider from "./slider";
 // import Main from "./main";
 
