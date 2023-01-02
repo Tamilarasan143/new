@@ -31,7 +31,8 @@ export default function HomePage() {
         <TopBar />
         <ToolBar />
         <NavBar/>
-        <ImageSlider />
+        <Slider />
+        {/* <ImageSlider /> */}
         <Facts/>
         <AboutUs />
         <Service />
