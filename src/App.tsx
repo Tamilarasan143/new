@@ -16,6 +16,7 @@ import UsersList from "./pages/my-account/users";
 import GuestRoomReservation from "./pages/guest-rooms";
 import { AdminDashboard } from "./pages/dashboard";
 import MyCalender from "./pages/calender";
+import MembershipList from "./pages/membership/membership";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="login" element={<LoginPage />} />
         <Route path="acc" element={<MyAccount />}>
           <Route path="" element={<AdminDashboard />} />
+          <Route path="members/list" element={<MembershipList />} />
           <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="calendar" element={<MyCalender />} />
           <Route path="users" element={<UsersList />} />
