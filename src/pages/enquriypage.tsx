@@ -1,11 +1,10 @@
-import Header from "../components/header/header";
-import ImageSlider from "./homepage/slider";
-import Footer from "../components/footer/footer";
+import Header from "./homepage/header/header";
+import ImageSlider from "./homepage/image-slider";
 import { Button, Container, Figure, Row } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import con1 from "../assets/images/enquiry.gif";
 import React from "react";
-
+import Footer from "./homepage/footer/footer";
 
 export default function EnquriyPage() {
   return (

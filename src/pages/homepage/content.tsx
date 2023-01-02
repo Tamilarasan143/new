@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
-import img1 from "../../assets/images/homepage/Spa.jpeg";
-import img2 from "../../assets/images/homepage/Party.jpeg";
-import img3 from "../../assets/images/homepage/Bar.jpeg";
-import img4 from "../../assets/images/homepage/Spa.jpeg";
-import img5 from "../../assets/images/homepage/Party.jpeg";
-import img6 from "../../assets/images/homepage/Bar.jpeg";
+import img1 from "../../assets/images/homepage/spa.jpeg";
+import img2 from "../../assets/images/homepage/party.jpeg";
+import img3 from "../../assets/images/homepage/bar.jpeg";
+import img4 from "../../assets/images/homepage/spa.jpeg";
+import img5 from "../../assets/images/homepage/party.jpeg";
+import img6 from "../../assets/images/homepage/bar.jpeg";
 import { Link } from "react-router-dom";
 
 export default function HomeContent() {

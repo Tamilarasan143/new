@@ -48,6 +48,17 @@ export default function MySideBar() {
         >
           Calendar
         </MenuItem>
+        <SubMenu
+          icon={<FontAwesomeIcon icon={faMoneyBill} />}
+          label="Membership"
+        >
+          <MenuItem
+            icon={<FontAwesomeIcon icon={faCheckToSlot} />}
+            routerLink={<Link to="/acc/members/list" />}
+          >
+            Members
+          </MenuItem>
+        </SubMenu>
         <SubMenu icon={<FontAwesomeIcon icon={faUsers} />} label="Users">
           <MenuItem
             icon={<FontAwesomeIcon icon={faList} />}
@@ -56,6 +67,7 @@ export default function MySideBar() {
             List
           </MenuItem>
         </SubMenu>
+
         <SubMenu icon={<FontAwesomeIcon icon={faMoneyBill} />} label="Events">
           <MenuItem
             icon={<FontAwesomeIcon icon={faCheckToSlot} />}

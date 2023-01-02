@@ -1,32 +1,21 @@
 import React, { useState } from "react";
-import spa1 from "../../assets/images/Spa/spa1.jpeg";
-import spa2 from "../../assets/images/Spa/spa2.jpeg";
-import spa3 from "../../assets/images/Spa/spa1.jpeg";
-import spa4 from "../../assets/images/Spa/spa4.jpeg";
-import spa5 from "../../assets/images/Spa/spa5.jpeg";
-import spa6 from "../../assets/images/Spa/spa6.jpeg";
-import spa7 from "../../assets/images/Spa/spa7.jpeg";
-import spa8 from "../../assets/images/Spa/spa2.jpeg";
+import spa1 from "../../assets/images/spa/spa1.jpeg";
+import spa2 from "../../assets/images/spa/spa2.jpeg";
+import spa3 from "../../assets/images/spa/spa1.jpeg";
+import spa4 from "../../assets/images/spa/spa4.jpeg";
+import spa5 from "../../assets/images/spa/spa5.jpeg";
+import spa6 from "../../assets/images/spa/spa6.jpeg";
+import spa7 from "../../assets/images/spa/spa7.jpeg";
+import spa8 from "../../assets/images/spa/spa2.jpeg";
 import { Container, Modal, Row } from "react-bootstrap";
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
+import Header from "../homepage/header/header";
 import Image from "react-bootstrap/Image";
 import Col from "react-bootstrap/esm/Col";
 import ImgGallery from "../../components/imgGallery/imgGallery";
 import ImagePreview from "../../components/imgPreview/imagePreview";
+import Footer from "../homepage/footer/footer";
 
-const images = [
-  spa1,
-  spa2,
-  spa3,
-  spa4,
-  spa5,
-  spa6,
-  spa7,
-  spa7,
-  spa8,
-
-];
+const images = [spa1, spa2, spa3, spa4, spa5, spa6, spa7, spa7, spa8];
 
 export default function SpaDetails() {
   const [show, setShow] = useState(false);
@@ -36,7 +25,14 @@ export default function SpaDetails() {
     <Container>
       <Header />
       <Container>
-        <div className="row mt-5" style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+        <div
+          className="row mt-5"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <div className="col-lg-4">
             <Image
               className="rounded-circle"

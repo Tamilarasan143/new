@@ -1,9 +1,9 @@
-import Header from "../components/header/header";
-import ImageSlider from "./homepage/slider";
-import Footer from "../components/footer/footer";
+import Header from "./homepage/header/header";
+import ImageSlider from "./homepage/image-slider";
 import { Button, Col, Container, Figure, Row } from "react-bootstrap";
 import con1 from "../assets/images/contactus.gif";
 import React from "react";
+import Footer from "./homepage/footer/footer";
 
 export default function ContactPage() {
   return (
