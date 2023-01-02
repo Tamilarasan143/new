@@ -3,3 +3,19 @@ body {
   height: 100%;
   margin: 0;
 }
+
+.slider-width {
+  max-width: 900px;
+}
+
+.about-img{
+  height: 50px;
+  width: 50px;
+}
+
+.service-wd{
+  max-width: 600px;
+}
+.footer-wd {
+  max-width: 400px;
+}

@@ -5,6 +5,11 @@ import { ProSidebarProvider } from "react-pro-sidebar";
 import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import "./styles/style.css"
+import "./styles/animate.css"
+import "./styles/animate.min.css"
+import "./styles/carousal.css"
+import "./styles/lightbox.css"
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
