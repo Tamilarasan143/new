@@ -1,18 +1,9 @@
 import React from 'react';
 
-//Bootstrap libraries
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
-
-//jquery, popper.js libraries for bootstrap modal
-import 'jquery/dist/jquery.min.js';
-
 import $ from 'jquery';
- 
-//Here are the modules for fullcalendar and dayclick event
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
-import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
+import interactionPlugin from "@fullcalendar/interaction";
 
 export default function Calendar() {
   return (
@@ -24,7 +15,7 @@ export default function Calendar() {
       <div className="container">
           <FullCalendar
             plugins={[ dayGridPlugin, interactionPlugin ]}
-            //Dayclick open sweetalert
+
             dateClick={function(arg) {
               $("#myModal").modal("show");
               $(".modal-body").html("");

@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-router-dom";
-import img0 from "../../assets/images/logo/logo.gif";
+
 export default function Header() {
   return (
     <>
@@ -13,7 +13,7 @@ export default function Header() {
         <Container>
           <Navbar.Brand href="/">
             <img
-              src={img0}
+              src={""}
               alt="logo"
               className="rounded mx-auto d-block img-thumbnail"
               style={{ height: "30px" }}
