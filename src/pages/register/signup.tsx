@@ -23,9 +23,9 @@ function Signup() {
     acceptTerms: boolean;
   };
   const validationSchema = Yup.object().shape({
-    firstname: Yup.string().required("Firstname is required"),
+    firstname: Yup.string().required("First Name is required"),
     lastname: Yup.string()
-      .required("Lastname is required")
+      .required("Last Name is required")
       .min(4, "Lastname must be at least 6 characters")
       .max(10, "Lastname must not exceed 20 characters"),
     email: Yup.string().required("Email is required").email("Email is invalid"),
