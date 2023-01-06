@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import React from "react";
 import Form from "react-bootstrap/Form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -9,12 +9,19 @@ import Col from "react-bootstrap/Col";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CircleAvatar from "../../components/circleavatar/circleAvatar";
-import { useForm } from "react-hook-form";
+import { useForm, } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { ErrorMessage } from "@hookform/error-message";
+import { useUserContext } from "../../data/providers/users/hooks";
 
 function Signup() {
+  const {  createAccount } = useUserContext();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const locState: any = location.state;
+  const from = locState ? locState.from?.pathname || "/acc" : "/acc";
+
   type UserSubmitForm = {
     firstname: string;
     lastname: string;
@@ -22,19 +29,21 @@ function Signup() {
     password: string;
     acceptTerms: boolean;
   };
+
   const validationSchema = Yup.object().shape({
     firstname: Yup.string().required("First Name is required"),
     lastname: Yup.string()
       .required("Last Name is required")
-      .min(4, "Lastname must be at least 6 characters")
-      .max(10, "Lastname must not exceed 20 characters"),
+      .min(4, "Lastname must be at least 4 characters")
+      .max(10, "Lastname must not exceed 10 characters"),
     email: Yup.string().required("Email is required").email("Email is invalid"),
     password: Yup.string()
       .required("Password is required")
-      .min(6, "Password must be at least 6 characters")
-      .max(20, "Password must not exceed 40 characters"),
+      .min(4, "Password must be at least 4 characters")
+      .max(20, "Password must not exceed 20 characters"),
     acceptTerms: Yup.bool().oneOf([true], "Accept Terms is required"),
   });
+
   const {
     register,
     handleSubmit,
@@ -43,6 +52,17 @@ function Signup() {
     resolver: yupResolver(validationSchema),
   });
   const onSubmit = (data: UserSubmitForm) => {
+    createAccount(data.firstname,data.lastname,data.email, data.password).then((result) => {
+      if (result.success) {
+        console.log("Login Sucess", result);
+
+        navigate(from, { replace: true });
+      } else {
+        // Show failure error codes
+        console.log("Login failed", result);
+      }
+    });
+    console.log("data", data)
     console.log(JSON.stringify(data, null, 2));
   };
 
@@ -52,7 +72,6 @@ function Signup() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // marginTop: "15%",
         width: "1000",
         height: "100vh",
         backgroundColor: "white",
@@ -92,6 +111,7 @@ function Signup() {
                     </Form.Control.Feedback>
                   )}
                 />
+
               </Form.Group>
               <Form.Group as={Col} controlId="formGridPassword">
                 <Form.Control
@@ -111,6 +131,7 @@ function Signup() {
                     </Form.Control.Feedback>
                   )}
                 />
+
               </Form.Group>
             </Row>
             <Form.Group className="mb-3" controlId="formGridEmail">
@@ -129,6 +150,7 @@ function Signup() {
                   </Form.Control.Feedback>
                 )}
               />
+
             </Form.Group>
             <Form.Group className="mb-3" controlId="formGridPassword">
               <Form.Control
@@ -148,15 +170,14 @@ function Signup() {
                   </Form.Control.Feedback>
                 )}
               />
+
             </Form.Group>
             <Form.Group className="mb-3" id="formGridCheckbox">
               <Form.Check
                 type="checkbox"
                 label="I agree to terms & conditions."
                 {...register("acceptTerms")}
-                className={` ${
-                  errors.acceptTerms ? "is-invalid" : ""
-                }`}
+                className={` ${errors.acceptTerms ? "is-invalid" : ""}`}
                 style={{ textAlign: "left" }}
               />
               <ErrorMessage
@@ -168,6 +189,7 @@ function Signup() {
                   </Form.Control.Feedback>
                 )}
               />
+              
             </Form.Group>
             <Button
               onClick={handleSubmit(onSubmit)}
