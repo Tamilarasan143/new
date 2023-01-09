@@ -20,7 +20,7 @@
     "react-bootstrap": "^2.7.0",
     "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.41.3",
+    "react-hook-form": "^7.41.5",
     "react-image-gallery": "^1.2.11",
     "react-pro-sidebar": "^1.0.0-alpha.9",
     "react-router-dom": "^6.4.5",
