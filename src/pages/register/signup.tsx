@@ -62,7 +62,7 @@ function Signup() {
                         </Container>
                         <br></br>
                         <br></br>
-                        <div style={{ textAlign: "center" }} className="copyright">Copyright@2022, Allrights reserved Mithra</div>
+                        <div style={{ textAlign: "center" }} className="copyright">© Mithra Resorts & Club, All Right Reserved.</div>
                     </Form>
                 </Card.Body>
             </Card>
