@@ -47,7 +47,7 @@ export default function Footer() {
         >
           <div className="col-5">
             <div style={{ textAlign: "left" }} className="copyright">
-              Copyright @2022 All Rights Reserved Mithra Resorts &amp; Club
+            © Mithra Resorts & Club, All Right Reserved.
             </div>
           </div>
           <div className="col-5 pageContent">

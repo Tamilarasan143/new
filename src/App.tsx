@@ -21,6 +21,7 @@ import { Spinner } from "react-bootstrap";
 import { UserContextProvider } from "./data/providers/users";
 import appConfig from "./data/config/app-config";
 import Error404 from "./components/errors/e404";
+import Forgetpassword from "./pages/login/forgetpassword";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,6 +53,7 @@ function App() {
           <Route path="aboutus" element={<AboutusPage />} />
           <Route path="register" element={<Signup />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="forgetpassword" element={<Forgetpassword/>} />
           <Route path="*" element={<Error404 />} />
           <Route path="acc" element={<MyAccount />}>
             <Route path="" element={<AdminDashboard />} />

@@ -109,7 +109,7 @@ export const UserContextProvider = ({ children }: any) => {
   ): Promise<UserApiResult> {
     return new Promise((resolve) => {
       setLoading(true);
-      console.log("email ", email);
+      console.log("email ", name);
       createUserWithEmailAndPassword(auth, email, password)
         .then((res) => {
           setUser(res);

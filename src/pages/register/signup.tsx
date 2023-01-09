@@ -212,29 +212,20 @@ function Signup() {
               SIGN UP
             </Button>
 
-            <Container>
-              <Row>
-                <Col></Col>
-                <Col>
-                  <Link
-                    to={"/login"}
-                    style={{ textAlign: "right", fontSize: "10px" }}
-                  >
-                    Already have an account? Sign in
-                  </Link>
-                </Col>
-              </Row>
-            </Container>
-            <br></br>
-            <br></br>
-            <div style={{ textAlign: "center" }} className="copyright">
-              Copyright@2022, Allrights reserved Mithra
-            </div>
-          </Form>
-        </Card.Body>
-      </Card>
-    </div>
-  );
+                        <Container>
+                            <Row>
+                                <Col></Col>
+                                <Col><Link to={'/login'} style={{ textAlign: "right", fontSize: "10px" }}>Already have an account? Sign in</Link></Col>
+                            </Row>
+                        </Container>
+                        <br></br>
+                        <br></br>
+                        <div style={{ textAlign: "center" }} className="copyright">© Mithra Resorts & Club, All Right Reserved.</div>
+                    </Form>
+                </Card.Body>
+            </Card>
+        </div>
+    );
 }
 
 export default Signup;
