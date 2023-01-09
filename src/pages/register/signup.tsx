@@ -9,14 +9,15 @@ import Col from "react-bootstrap/Col";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CircleAvatar from "../../components/circleavatar/circleAvatar";
-import { useForm, } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { ErrorMessage } from "@hookform/error-message";
 import { useUserContext } from "../../data/providers/users/hooks";
+import { Alert } from "react-bootstrap";
 
 function Signup() {
-  const {  createAccount } = useUserContext();
+  const { createAccount } = useUserContext();
   const location = useLocation();
   const navigate = useNavigate();
   const locState: any = location.state;
@@ -27,6 +28,7 @@ function Signup() {
     lastname: string;
     email: string;
     password: string;
+    serverError?: string;
     acceptTerms: boolean;
   };
 
@@ -47,12 +49,17 @@ function Signup() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors },
   } = useForm<UserSubmitForm>({
     resolver: yupResolver(validationSchema),
   });
   const onSubmit = (data: UserSubmitForm) => {
-    createAccount(data.firstname,data.lastname,data.email, data.password).then((result) => {
+    createAccount(
+      `${data.firstname}${data.lastname}`,
+      data.email,
+      data.password
+    ).then((result) => {
       if (result.success) {
         console.log("Login Sucess", result);
 
@@ -60,9 +67,13 @@ function Signup() {
       } else {
         // Show failure error codes
         console.log("Login failed", result);
+        setError("serverError", {
+          type: "server",
+          message: result.errorCode + ":" + result.errorMessage,
+        });
       }
     });
-    console.log("data", data)
+    console.log("data", data);
     console.log(JSON.stringify(data, null, 2));
   };
 
@@ -90,7 +101,13 @@ function Signup() {
                 </CircleAvatar>
               </Col>
             </Row>
+
             <h3>Sign Up</h3>
+            <ErrorMessage
+											errors={errors}
+											name="serverError"
+											render={({ message }) => <Alert variant="danger">{message}</Alert>}
+										/>
 
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridEmail">
@@ -111,7 +128,6 @@ function Signup() {
                     </Form.Control.Feedback>
                   )}
                 />
-
               </Form.Group>
               <Form.Group as={Col} controlId="formGridPassword">
                 <Form.Control
@@ -131,7 +147,6 @@ function Signup() {
                     </Form.Control.Feedback>
                   )}
                 />
-
               </Form.Group>
             </Row>
             <Form.Group className="mb-3" controlId="formGridEmail">
@@ -150,7 +165,6 @@ function Signup() {
                   </Form.Control.Feedback>
                 )}
               />
-
             </Form.Group>
             <Form.Group className="mb-3" controlId="formGridPassword">
               <Form.Control
@@ -170,7 +184,6 @@ function Signup() {
                   </Form.Control.Feedback>
                 )}
               />
-
             </Form.Group>
             <Form.Group className="mb-3" id="formGridCheckbox">
               <Form.Check
@@ -189,7 +202,6 @@ function Signup() {
                   </Form.Control.Feedback>
                 )}
               />
-              
             </Form.Group>
             <Button
               onClick={handleSubmit(onSubmit)}
