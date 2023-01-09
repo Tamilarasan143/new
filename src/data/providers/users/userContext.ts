@@ -33,7 +33,7 @@ export interface IUserContext {
     showProgress(show: boolean): void
     login(email: string, password: string): Promise<UserApiResult>
     resetPassword(email: string): Promise<UserApiResult>
-    createAccount(Firstname: string,Lastname: string, Email: string, PSSSassword: string, mobile?: string): Promise<UserApiResult>
+    createAccount(name: string, email: string, password: string, mobile?: string): Promise<UserApiResult>
     logout(): Promise<Boolean>
 
 }

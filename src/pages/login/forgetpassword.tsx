@@ -2,20 +2,26 @@ import React from 'react'
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 import { useUserContext } from "../../data/providers/users/hooks";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { ErrorMessage } from "@hookform/error-message"
+import { Alert } from 'react-bootstrap';
 
 export default function Forgetpassword() {
   const { resetPassword} = useUserContext();
- 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const locState: any = location.state;
+  const from = locState ? locState.from?.pathname || "/login" : "/login";
   
 
   type UserSubmitForm = {
     email: string;
+    serverError: string;
   };
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -25,6 +31,7 @@ export default function Forgetpassword() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors }
   } = useForm<UserSubmitForm>({
     resolver: yupResolver(validationSchema)
@@ -33,8 +40,10 @@ export default function Forgetpassword() {
     resetPassword(data.email).then((result) => {
       if (result.success) {
         console.log("Login Sucess", result);
+        navigate(from, { replace: true });
       } else {
         console.log("Login failed", result);
+        setError("serverError", { type: "server", message: result.errorCode + ":" + result.errorMessage })
       }
     })
     console.log("data", data)
@@ -52,13 +61,18 @@ export default function Forgetpassword() {
       }}
     >
         <Card style={{ width: "34rem" }}>
-          <Card.Header className="m-0">
-          <h3>Find Your Account</h3>
+          <Card.Header className="m-0 d-flex justify-content-center">
+          <h3>Reset Password</h3>
           </Card.Header>
         <Card.Body>
+        <ErrorMessage
+											errors={errors}
+											name="serverError"
+											render={({ message }) => <Alert variant="danger">{message}</Alert>}
+										/>
         <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Please enter your email address or mobile number to search for your account.</Form.Label>
+        <Form.Label>Please enter your email address and we'll send a link to reset your password.</Form.Label>
         <Form.Control
                   type="email"
                   placeholder="Email Address*"
@@ -76,19 +90,20 @@ export default function Forgetpassword() {
 												)}
 											/>
       </Form.Group>
-      </Form>
-        </Card.Body>
-      <Card.Footer className=" d-flex justify-content-end  ">
-      {/* <Button   className="m-2" variant="secondary" type="submit"><Link to={'/login'}>Cancel</Link>  
-      </Button> */}
-      <Button  
-      className="m-2"
+      <div className=" d-flex justify-content-end " >
+      <Button
+        
        variant="primary" 
        type="submit"
        onClick={handleSubmit(onSubmit)}
         >
-        Submit
+        Reset
       </Button>
+      </div>
+      </Form>
+        </Card.Body>
+      <Card.Footer className=" m-0 d-flex justify-content-center text-decoration-none ">
+      <Link className="text-decoration-none " to={'/login'}><h5>Back to Sign In</h5></Link>
       </Card.Footer>
         </Card>
     </div>

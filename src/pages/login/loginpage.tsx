@@ -9,12 +9,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CircleAvatar from "../../components/circleavatar/circleAvatar";
-import React, { useState } from "react";
+
 import { useUserContext } from "../../data/providers/users/hooks";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import Alert from 'react-bootstrap/Alert';
+import { Alert } from "react-bootstrap";
+
 
 export default function LoginPage() {
 
@@ -23,11 +24,12 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const locState: any = location.state;
   const from = locState ? locState.from?.pathname || "/acc" : "/acc";
-  const [show, setShow] = useState(true);
-  
+
+
   type UserSubmitForm = {
     email: string;
     password: string;
+    serverError?:string;
   };
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -41,6 +43,7 @@ export default function LoginPage() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors }
   } = useForm<UserSubmitForm>({
     resolver: yupResolver(validationSchema)
@@ -54,17 +57,10 @@ export default function LoginPage() {
       } else {
         // Show failure error codes
         console.log("Login failed", result);
+        setError("serverError", { type: "server", message: result.errorCode + ":" + result.errorMessage })
       }
-    }).catch(e=>{if (show) {
-      return (
-        <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-          <Alert.Heading>Login Failed </Alert.Heading>
-          <p>
-           Something Wrong
-          </p>
-        </Alert>
-      );
-    }})
+    })
+    
     console.log("data", data)
     console.log(JSON.stringify(data, null, 2));
   };
@@ -96,6 +92,11 @@ export default function LoginPage() {
             </Row>
 
             <h3>Sign in</h3>
+            <ErrorMessage
+											errors={errors}
+											name="serverError"
+											render={({ message }) => <Alert variant="danger">{message}</Alert>}
+										/>
             <Form >
               <Form.Group className="mb-4 form-group" controlId="formBasicEmail">
                 <Form.Control
