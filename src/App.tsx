@@ -22,6 +22,13 @@ import { UserContextProvider } from "./data/providers/users";
 import appConfig from "./data/config/app-config";
 import Error404 from "./components/errors/e404";
 import Forgetpassword from "./pages/login/forgetpassword";
+import BarPurchaseCreate from "./pages/my-account/bar/Purchase/create";
+import BarPurchaseList from "./pages/my-account/bar/Purchase/list";
+import RoomPurchaseList from "./pages/my-account/rooms/purchase/roomlist";
+import RoomPurchaseCreate from "./pages/my-account/rooms/purchase/roomcreate";
+import EventPurchaseList from "./pages/my-account/event/purchase/eventlist";
+import EventPurchaseCreate from "./pages/my-account/event/purchase/eventcreate";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,7 +59,7 @@ function App() {
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="aboutus" element={<AboutusPage />} />
           <Route path="register" element={<Signup />} />
-          <Route path="login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="forgetpassword" element={<Forgetpassword/>} />
           <Route path="*" element={<Error404 />} />
           <Route path="acc" element={<MyAccount />}>
@@ -60,6 +67,12 @@ function App() {
             <Route path="members/list" element={<MembershipList />} />
             <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="calendar" element={<MyCalender />} />
+            <Route path="bar/purchases" element={<BarPurchaseList/>} />
+            <Route path="bar/purchase/create" element={<BarPurchaseCreate/>} /> 
+            <Route path="room/purchases" element={<RoomPurchaseList/>} />
+            <Route path="room/purchase/create" element={<RoomPurchaseCreate/>} />
+            <Route path="event/purchases" element={<EventPurchaseList/>} />
+            <Route path="event/purchase/create" element={<EventPurchaseCreate/>} />
             <Route path="users" element={<UsersList />} />
             <Route path="events" element={<AdminDashboard />} />
             <Route path="events/reservations" element={<AdminDashboard />} />

@@ -83,7 +83,7 @@ export default function MySideBar() {
           </MenuItem>
           <MenuItem
             icon={<FontAwesomeIcon icon={faDollarSign} />}
-            routerLink={<Link to="/acc/guest/reservation" />}
+            routerLink={<Link to="/acc/event/purchases" />}
           >
             Expense
           </MenuItem>
@@ -101,7 +101,7 @@ export default function MySideBar() {
         >
           <MenuItem
             icon={<FontAwesomeIcon icon={faCartShopping} />}
-            routerLink={<Link to="/acc/guest/reservation" />}
+            routerLink={<Link to="/acc/bar/purchases" />}
           >
             Purchase
           </MenuItem>
@@ -123,6 +123,12 @@ export default function MySideBar() {
           icon={<FontAwesomeIcon icon={faHotel} />}
           label="Rooms"
         >
+          <MenuItem
+            icon={<FontAwesomeIcon icon={faCartShopping} />}
+            routerLink={<Link to="/acc/room/purchases" />}
+          >
+            Purchase
+          </MenuItem>
           <MenuItem
             icon={<FontAwesomeIcon icon={faCheckToSlot} />}
             routerLink={<Link to="/acc/guest/reservation" />}

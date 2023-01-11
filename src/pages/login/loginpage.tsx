@@ -29,7 +29,7 @@ export default function LoginPage() {
   type UserSubmitForm = {
     email: string;
     password: string;
-    serverError?:string;
+    serverError?: string;
   };
   const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -60,7 +60,7 @@ export default function LoginPage() {
         setError("serverError", { type: "server", message: result.errorCode + ":" + result.errorMessage })
       }
     })
-    
+
     console.log("data", data)
     console.log(JSON.stringify(data, null, 2));
   };
@@ -93,10 +93,11 @@ export default function LoginPage() {
 
             <h3>Sign in</h3>
             <ErrorMessage
-											errors={errors}
-											name="serverError"
-											render={({ message }) => <Alert variant="danger">{message}</Alert>}
-										/>
+              errors={errors}
+              name="serverError"
+              render={({ message }) => <Alert variant="danger">{message === "auth/wrong-password:Firebase: Error (auth/wrong-password)." ? "Wrong Password , Please try Again" : message === "auth/user-not-found:Firebase: Error (auth/user-not-found)." ?  "User Not Found" :
+              "Something Wrong Please Try Again" } </Alert>}
+            />
             <Form >
               <Form.Group className="mb-4 form-group" controlId="formBasicEmail">
                 <Form.Control
@@ -104,38 +105,38 @@ export default function LoginPage() {
                   placeholder="Email Address*"
                   {...register('email')}
                   className={`form-control ${errors.email ? 'is-invalid' : ''}`}
-                 
+
                 />
                 {/* <div className="invalid-feedback">{errors.email?.message}</div> */}
                 <ErrorMessage
-												errors={errors}
-												name="email"
-												render={({ message }) => (
-													<Form.Control.Feedback type="invalid">
-														{message}
-													</Form.Control.Feedback>
-												)}
-											/>
+                  errors={errors}
+                  name="email"
+                  render={({ message }) => (
+                    <Form.Control.Feedback type="invalid">
+                      {message}
+                    </Form.Control.Feedback>
+                  )}
+                />
               </Form.Group>
 
               <Form.Group className="mb-3 form-group" controlId="formBasicPassword">
                 <Form.Control
                   type="password"
                   placeholder="Password*"
-                 
+
                   {...register('password')}
                   className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                 />
                 {/* <div className="invalid-feedback">{errors.password?.message}</div> */}
                 <ErrorMessage
-												errors={errors}
-												name="password"
-												render={({ message }) => (
-													<Form.Control.Feedback type="invalid">
-														{message}
-													</Form.Control.Feedback>
-												)}
-                        />
+                  errors={errors}
+                  name="password"
+                  render={({ message }) => (
+                    <Form.Control.Feedback type="invalid">
+                      {message}
+                    </Form.Control.Feedback>
+                  )}
+                />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check
@@ -149,7 +150,7 @@ export default function LoginPage() {
                 className="mb-3 form-group"
                 variant="primary"
                 type="submit"
-               
+
                 onClick={handleSubmit(onSubmit)}
                 style={{ fontSize: "12px", width: "320px", textAlign: "center" }}
               >
@@ -160,7 +161,7 @@ export default function LoginPage() {
               <Row>
                 <Col sm={4}>
                   <Link
-                    to={"/forgetpassword"}
+                    to={"/forgetpassword"} replace
                     style={{ textAlign: "left", fontSize: "10px" }}
                   >
                     Forgot Password?
@@ -179,7 +180,7 @@ export default function LoginPage() {
             <br></br>
             <br></br>
             <div style={{ textAlign: "center" }} className="copyright">
-             © Mithra Resorts & Club, All Right Reserved.
+              © Mithra Resorts & Club, All Right Reserved.
             </div>
           </Form>
         </Card.Body>
