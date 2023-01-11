@@ -4,17 +4,17 @@ import {
   Menu,
   MenuItem,
   SubMenu,
-  ProSidebarProvider,
-  useProSidebar,
+  // ProSidebarProvider,
+  // useProSidebar,
 } from "react-pro-sidebar";
 import React from "react";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import {
   FontAwesomeIcon,
-  FontAwesomeIconProps,
+  // FontAwesomeIconProps,
 } from "@fortawesome/react-fontawesome";
 import {
-  faBars,
+
   faUsers,
   faList,
   faMoneyBill,
@@ -31,7 +31,7 @@ import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 import { Link } from "react-router-dom";
 
 export default function MySideBar() {
-  const { collapseSidebar } = useProSidebar();
+  // const { collapseSidebar } = useProSidebar();
 
   return (
     <Sidebar className="" style={{ height: "100%" }}>
